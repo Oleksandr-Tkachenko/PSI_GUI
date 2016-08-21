@@ -16,6 +16,8 @@
 
 #include <QtGui/QWidget>
 #include <QtGui/QLabel>
+#include <QtGui/QLayout>
+#include <QtGui/QGroupBox>
 
 class PSI_WindowHandler {
 public:

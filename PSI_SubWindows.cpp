@@ -11,10 +11,12 @@
  * Created on August 21, 2016, 5:07 PM
  */
 
+#include <QtGui/qpushbutton.h>
+
 #include "PSI_SubWindows.h"
 
 QWidget * PSI_WindowHandler::configureWindowSize(QWidget* w) {
-    w->setFixedSize(640, 480);
+    w->setFixedSize(1024, 768);
     return w;
 }
 
@@ -22,8 +24,19 @@ QWidget * PSI_WindowHandler::configureWindowSize(QWidget* w) {
 
 PSI_IntersectionWindow::PSI_IntersectionWindow(QWidget* parent) : QWidget(parent) {
     PSI_WindowHandler::configureWindowSize(this);
+    QGroupBox * horizontalGroupBox = new QGroupBox;
+    QGridLayout * layout = new QGridLayout;
+    QPushButton * b1 = new QPushButton("1");
+    QPushButton * b2 = new QPushButton("2");
+    QPushButton * b3 = new QPushButton("3");
     QLabel * l = new QLabel(this);
-    l->setText("PSI_IntersectionWindow");
+    l->setText("PSI Intersection");
+    layout->addWidget(l, 0, 1);
+    layout->addWidget(b1, 1, 0);
+    layout->addWidget(b2, 1, 1);
+    layout->addWidget(b3, 1, 2);
+    horizontalGroupBox->setLayout(layout);
+    this->setLayout(layout);
 }
 
 PSI_IntersectionWindow::~PSI_IntersectionWindow() {
