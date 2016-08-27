@@ -7,11 +7,13 @@ TARGET = psi-gui
 DEPENDPATH += .
 INCLUDEPATH += .
 
-FORMS = window.ui
+FORMS = window.ui subwindow.ui
 
 target.path = /usr/bin/
 INSTALLS += target
 
 # Input
-HEADERS += PSI_MainWindow.h PSI_SubWindows.h
-SOURCES += main.cpp PSI_MainWindow.cpp PSI_SubWindows.cpp
+HEADERS += PSI_GUI_MainWindow.h PSI_GUI_SubWindowTemplate.h PSI_GUI_CH_Window.h \
+PSI_GUI_I_Window.h PSI_GUI_NH_Window.h PSI_GUI_OT_Window.h PSI_GUI_SH_Window.h
+SOURCES += PSI_GUI_MainWindow.cpp PSI_GUI_SubWindowTemplate.cpp PSI_GUI_CH_Window.cpp \
+PSI_GUI_I_Window.cpp PSI_GUI_NH_Window.cpp PSI_GUI_OT_Window.cpp PSI_GUI_SH_Window.cpp  main.cpp

@@ -15,16 +15,13 @@
 #include <QtUiTools/QtUiTools>
 
 #include "ui_window.h"
-#include "PSI_MainWindow.h"
+#include "PSI_GUI_MainWindow.h"
 
 int main(int argc, char *argv[]) {
     if (argc > 1)
         return EXIT_FAILURE;
-
     QApplication app(argc, argv);
-    PSI_MainWindow *mainWindow = new PSI_MainWindow;
-    //mainWindow->show();
-    //Ui::PSI ui;
+    new PSI_MainWindow;
     return app.exec();
 }
 
