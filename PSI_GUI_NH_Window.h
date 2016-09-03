@@ -16,15 +16,21 @@
 
 
 #include <QtGui/QWidget>
+#include <QResource>
 
 #include "PSI_GUI_SubWindowTemplate.h"
 
+#define HASH_SIZE "16"
 
 class PSI_GUI_NH_Server_Window : public PSI_GUI_SubWindowTemplate {
     Q_OBJECT
 public:
     explicit PSI_GUI_NH_Server_Window(QWidget * parent = 0, QWidget * main = 0);
     virtual ~PSI_GUI_NH_Server_Window();
+protected:
+    bool PSI_GUI_selfCheck();
+    void PSI_GUI_postExecution();
+
 };
 
 class PSI_GUI_NH_Client_Window : public PSI_GUI_SubWindowTemplate {
@@ -32,6 +38,8 @@ class PSI_GUI_NH_Client_Window : public PSI_GUI_SubWindowTemplate {
 public:
     explicit PSI_GUI_NH_Client_Window(QWidget * parent = 0, QWidget * main = 0);
     virtual ~PSI_GUI_NH_Client_Window();
+protected:
+    bool PSI_GUI_selfCheck();
 };
 
 

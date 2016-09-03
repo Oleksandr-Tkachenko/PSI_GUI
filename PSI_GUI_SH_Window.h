@@ -16,6 +16,7 @@
 
 
 #include <QtGui/QWidget>
+#include <QResource>
 
 #include "PSI_GUI_SubWindowTemplate.h"
 
@@ -24,6 +25,8 @@ class PSI_GUI_SH_Window : public PSI_GUI_SubWindowTemplate {
 public:
     explicit PSI_GUI_SH_Window(QWidget * parent = 0, QWidget * main = 0);
     virtual ~PSI_GUI_SH_Window();
+protected:
+    bool PSI_GUI_selfCheck();
 };
 
 #endif /* PSI_GUI_SH_WINDOW_H */
