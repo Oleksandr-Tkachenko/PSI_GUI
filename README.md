@@ -26,4 +26,4 @@ sudo make remove
 * psi-naive-hashing
 * psi-cuckoo-hashing
 * psi-intersection
-* psi-simple-hashing_ 
+* psi-simple-hashing
