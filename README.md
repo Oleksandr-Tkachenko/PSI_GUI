@@ -1,6 +1,6 @@
 # Private Set Intersection (PSI)
 ###GUI###
-
+---
 __Install:__
 ```
 ./configure
@@ -20,6 +20,7 @@ sudo make remove
 
 
 ###Dependencies:
+---
 * qt4-dev-tools
 * lpsi-util
 * psi-naive-hashing
