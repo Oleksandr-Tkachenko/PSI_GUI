@@ -15,7 +15,7 @@ sudo make clean
 
 __Remove:__ 
 ```
-sudo make remove
+sudo make uninstall
 ```
 
 
