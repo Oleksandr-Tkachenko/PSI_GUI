@@ -17,7 +17,7 @@ PSI_GUI_OT_Server_Window::PSI_GUI_OT_Server_Window(QWidget* parent, QWidget * ma
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource(RESOURCES_DIR);
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Oblivious Transfer Server");
 }
 
@@ -32,7 +32,7 @@ PSI_GUI_OT_Client_Window::PSI_GUI_OT_Client_Window(QWidget* parent, QWidget * ma
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource("images.rcc");
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Oblivious Transfer Client");
 }
 

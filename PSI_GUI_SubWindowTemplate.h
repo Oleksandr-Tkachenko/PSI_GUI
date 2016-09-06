@@ -22,7 +22,7 @@
 
 #include "ui_subwindow.h"
 
-#define RESOURCES_DIR "~/.PSI_GUI/images/images.qrb"
+#define RESOURCES_DIR "/.PSI_GUI/images/images.qrb"
 
 class PSI_GUI_SubWindowTemplate : public QWidget {
     Q_OBJECT

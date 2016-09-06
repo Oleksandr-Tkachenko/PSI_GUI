@@ -17,7 +17,7 @@ PSI_GUI_SH_Window::PSI_GUI_SH_Window(QWidget* parent, QWidget * main) : PSI_GUI_
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource(RESOURCES_DIR);
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Simple Hashing");
     PSI_GUI_HideRecursiveDeepnessLimit();
     PSI_GUI_HideResultB();

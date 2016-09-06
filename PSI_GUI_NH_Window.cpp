@@ -18,7 +18,7 @@ PSI_GUI_NH_Server_Window::PSI_GUI_NH_Server_Window(QWidget* parent, QWidget * ma
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource(RESOURCES_DIR);
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Naive Hashing Server");
 
     PSI_GUI_NH_Hide();
@@ -93,7 +93,7 @@ PSI_GUI_NH_Client_Window::PSI_GUI_NH_Client_Window(QWidget* parent, QWidget * ma
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource("images.rcc");
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Naive Hashing Client");
     PSI_GUI_NH_Hide();
     PSI_GUI_HideResultA();

@@ -10,7 +10,7 @@ PSI_GUI_CH_Window::PSI_GUI_CH_Window(QWidget* parent, QWidget * main) : PSI_GUI_
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource(RESOURCES_DIR);
+    QResource::registerResource(QDir::homePath().append(RESOURCES_DIR));
     ui.windowLabel->setText("PSI Cuckoo Hashing");
     PSI_GUI_HideResultB();
     PSI_GUI_HideNetworkFeatures();
