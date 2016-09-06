@@ -3,7 +3,7 @@
 ---
 __Install:__
 ```
-./configure
+./configure.sh
 ```
 ```
 sudo make install
