@@ -17,7 +17,7 @@ PSI_GUI_I_Window::PSI_GUI_I_Window(QWidget* parent, QWidget * main) : PSI_GUI_Su
     ui.setupUi(this);
     this->show();
     PSI_GUI_connectAllButtons();
-    QResource::registerResource("images.rcc");
+    QResource::registerResource(RESOURCES_DIR);
     ui.windowLabel->setText("PSI Intersection");
     PSI_GUI_HideSeeds();
     PSI_GUI_HideResultB();
