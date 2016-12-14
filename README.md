@@ -29,6 +29,16 @@ This GUI provides fast and comfortable way of using following PSI modules:
 You can find informations and configuration recommendations for separate
  protocols at their own github repositories.
 
+###Demonstrator:
+---
+A simple demo is included in GUI. You can try out the OT-based PSI protocol 
+by including a text file with arbitrary contents and clicking on the start button. 
+Every line in this text file will be interpreted as an element.
+
+The demonstrator is a bash script, so you can also analyze how you can use the 
+single PSI tools. Scripts are placed in the "scripts" folder in source's root 
+directory.
+
 ###Dependencies:
 ---
 * qt4-dev-tools
