@@ -18,6 +18,16 @@ __Remove:__
 sudo make uninstall
 ```
 
+This GUI provides fast and comfortable way of using following PSI modules:
+* psi-naive-hashing(server, client)
+* psi-ot(server, client)
+* psi-demonstrator(server, client)
+* psi-cuckoo-hashing
+* psi-intersection
+* psi-simple-hashing
+
+You can find informations and configuration recommendations for separate
+ protocols at their own github repositories.
 
 ###Dependencies:
 ---
@@ -27,3 +37,6 @@ sudo make uninstall
 * psi-cuckoo-hashing
 * psi-intersection
 * psi-simple-hashing
+* psi-ot
+
+http://encrypto.de
