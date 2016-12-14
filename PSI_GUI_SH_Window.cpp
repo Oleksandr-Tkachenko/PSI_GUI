@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_GUI_SH_Window.cpp
  * Author: alex
@@ -59,6 +53,9 @@ bool PSI_GUI_SH_Window::PSI_GUI_selfCheck() {
     PSI_GUI_composeSeed(ui.lineEditHashSeed1, " -1 %s", seed1);
     PSI_GUI_composeSeed(ui.lineEditHashSeed2, " -2 %s", seed2);
     PSI_GUI_composeSeed(ui.lineEditHashSeed3, " -3 %s", seed3);
+    
+    if(ui.checkBoxReduction->isChecked())
+        strcat(command, " -r 1");
 
     return true;
 }

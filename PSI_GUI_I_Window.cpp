@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_GUI_I_Window.cpp
  * Author: alex
@@ -25,6 +19,7 @@ PSI_GUI_I_Window::PSI_GUI_I_Window(QWidget* parent, QWidget * main) : PSI_GUI_Su
     PSI_GUI_HideHashTableFeatures();
     PSI_GUI_HideNetworkFeatures();
     PSI_GUI_HideWriteBufferSize();
+    PSI_GUI_HideReductionButton();
 }
 
 PSI_GUI_I_Window::~PSI_GUI_I_Window() {

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_MainWindow.cpp
  * Author: alex
@@ -19,7 +13,8 @@ PSI_MainWindow::PSI_MainWindow(QWidget* parent) : QWidget(parent) {
     mainWindow->show();
     connect(ui.OKButton, SIGNAL(clicked(bool)), this, SLOT(on_OKButton_released()));
     while (0) {
-        while (!subWindow->isHidden()){}
+        while (!subWindow->isHidden()) {
+        }
         delete subWindow;
         mainWindow->show();
     }
@@ -51,6 +46,12 @@ void PSI_MainWindow::on_OKButton_released() {
             break;
         case 6:
             subWindow = getWindow(new PSI_GUI_OT_Client_Window(0, mainWindow));
+            break;
+        case 7:
+            subWindow = getWindow(new PSI_GUI_DEMO_Server_Window(0, mainWindow));
+            break;
+        case 8:
+            subWindow = getWindow(new PSI_GUI_DEMO_Client_Window(0, mainWindow));
             break;
     }
 }

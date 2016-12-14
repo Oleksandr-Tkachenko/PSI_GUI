@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_GUI_SubWindow.cpp
  * Author: alex
@@ -51,79 +45,124 @@ void PSI_GUI_SubWindowTemplate::PSI_GUI_connectFileBrowserButtons() {
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideSeeds() {
     ui.labelSeed1->hide();
+    ui.labelSeed1->setEnabled(false);
     ui.labelSeed2->hide();
+    ui.labelSeed2->setEnabled(false);
     ui.labelSeed3->hide();
+    ui.labelSeed3->setEnabled(false);
     ui.lineEditHashSeed1->hide();
+    ui.lineEditHashSeed1->setEnabled(false);
     ui.lineEditHashSeed2->hide();
+    ui.lineEditHashSeed2->setEnabled(false);
     ui.lineEditHashSeed3->hide();
+    ui.lineEditHashSeed3->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideResultB() {
     ui.labelPathResultB->hide();
+    ui.labelPathResultB->setEnabled(false);
     ui.lineEditPathResultB->hide();
+    ui.lineEditPathResultB->setEnabled(false);
     ui.browserPathResultButtonB->hide();
+    ui.browserPathResultButtonB->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideResultA() {
     ui.labelPathResult->hide();
+    ui.labelPathResult->setEnabled(false);
     ui.lineEditPathResult->hide();
+    ui.lineEditPathResult->setEnabled(false);
     ui.browserPathResultButton->hide();
+    ui.browserPathResultButton->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideRecursiveDeepnessLimit() {
     ui.labelRecursiveDeepnessLimit->hide();
+    ui.labelRecursiveDeepnessLimit->setEnabled(false);
     ui.lineEditRecursiveDeepnessLimit->hide();
+    ui.lineEditRecursiveDeepnessLimit->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideHashTableFeatures() {
     ui.labelTableSize->hide();
+    ui.labelTableSize->setEnabled(false);
     ui.labelTableSizeMultiplier->hide();
+    ui.labelTableSizeMultiplier->setEnabled(false);
     ui.lineEditTableSize->hide();
+    ui.lineEditTableSize->setEnabled(false);
     ui.lineEditTableSizeMultiplier->hide();
+    ui.lineEditTableSizeMultiplier->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideNetworkFeatures() {
     ui.labelIP->hide();
+    ui.labelIP->setEnabled(false);
     ui.labelPort->hide();
+    ui.labelPort->setEnabled(false);
     ui.lineEditIP->hide();
+    ui.lineEditIP->setEnabled(false);
     ui.lineEditPort->hide();
+    ui.lineEditPort->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideWriteBufferSize() {
     ui.labelWriteBufferSize->hide();
+    ui.labelWriteBufferSize->setEnabled(false);
     ui.lineEditWriteBufferSize->hide();
+    ui.lineEditWriteBufferSize->setEnabled(false);
+}
+
+void PSI_GUI_SubWindowTemplate::PSI_GUI_HideReadBufferSize() {
+    ui.labelReadBufferSize->hide();
+    ui.labelReadBufferSize->setEnabled(false);
+    ui.lineEditReadBufferSize->hide();
+    ui.lineEditReadBufferSize->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HidePathB() {
     ui.labelPathB->hide();
+    ui.labelPathB->setEnabled(false);
     ui.lineEditPathB->hide();
+    ui.lineEditPathB->setEnabled(false);
     ui.browserPathBButton->hide();
+    ui.browserPathBButton->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideBucketN() {
     ui.labelNumberOfBuckets->hide();
+    ui.labelNumberOfBuckets->setEnabled(false);
     ui.lineEditNumberOfBuckets->hide();
+    ui.lineEditNumberOfBuckets->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HidePathBuckets() {
     ui.labelPathBuckets->hide();
+    ui.labelPathBuckets->setEnabled(false);
     ui.lineEditPathBuckets->hide();
+    ui.lineEditPathBuckets->setEnabled(false);
     ui.browserPathBucketsButton->hide();
+    ui.browserPathBucketsButton->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideQueueBufferSize() {
     ui.labelQueueBufferSize->hide();
+    ui.labelQueueBufferSize->setEnabled(false);
     ui.lineEditQueueBufferSize->hide();
+    ui.lineEditQueueBufferSize->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideElementSize() {
     ui.labelElementSize->hide();
+    ui.labelElementSize->setEnabled(false);
     ui.lineEditElementSize->hide();
+    ui.lineEditElementSize->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_HideThreads() {
     ui.labelThreads->hide();
+    ui.labelThreads->setEnabled(false);
     ui.lineEditThreads->hide();
+    ui.lineEditThreads->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_NH_Hide() {
@@ -131,6 +170,12 @@ void PSI_GUI_SubWindowTemplate::PSI_GUI_NH_Hide() {
     PSI_GUI_HideRecursiveDeepnessLimit();
     PSI_GUI_HideSeeds();
     PSI_GUI_HideWriteBufferSize();
+    PSI_GUI_HideReductionButton();
+}
+
+void PSI_GUI_SubWindowTemplate::PSI_GUI_HideReductionButton() {
+    ui.checkBoxReduction->hide();
+    ui.checkBoxReduction->setEnabled(false);
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_go() {
@@ -247,6 +292,10 @@ void PSI_GUI_SubWindowTemplate::PSI_GUI_composeIfGreater0(char* arg, const char*
 }
 
 void PSI_GUI_SubWindowTemplate::PSI_GUI_Execute(char * command) {
+    const char msg[] = "Command to be executed\n";
+    ui.textBrowser->append(QString::fromAscii(msg, strlen(msg)));
+    ui.textBrowser->append(QString::fromAscii(command, strlen(command)));
+    ui.textBrowser->append(QString::fromAscii("\n\n", 2));
     FILE * program = popen(command, "r");
     if (program == NULL) {
         perror("Error starting program");

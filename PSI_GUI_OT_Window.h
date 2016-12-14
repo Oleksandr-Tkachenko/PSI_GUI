@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_GUI_OT_Window.h
  * Author: alex
@@ -26,6 +20,7 @@ public:
     virtual ~PSI_GUI_OT_Server_Window();
 protected:
     bool PSI_GUI_selfCheck();
+    void PSI_GUI_postExecution();
 };
 
 class PSI_GUI_OT_Client_Window : public PSI_GUI_SubWindowTemplate {
@@ -35,6 +30,7 @@ public:
     virtual ~PSI_GUI_OT_Client_Window();
 protected:
     bool PSI_GUI_selfCheck();
+    void PSI_GUI_postExecution();
 };
 
 #endif /* PSI_GUI_OT_WINDOW_H */

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   PSI_GUI_SubWindow.h
  * Author: alex
@@ -19,6 +13,8 @@
 #include <QtGui/QFileDialog>
 
 #include <stdio.h>
+#include <inttypes.h>
+#include <math.h>
 
 #include "ui_subwindow.h"
 
@@ -58,10 +54,12 @@ protected:
     void PSI_GUI_HideElementSize();
     void PSI_GUI_HideThreads();
     void PSI_GUI_NH_Hide();
-    
+    void PSI_GUI_HideReadBufferSize();
+    void PSI_GUI_HideReductionButton();
+
     void PSI_GUI_Execute(char * command);
 
-    Ui::Form ui;
+    Ui::PSITool ui;
     QWidget * main;
     QWidget * window;
     char command[512];
