@@ -88,6 +88,16 @@
       <string>Oblivious Transfer Client</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>Demonstrator Server</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Demonstrator Client</string>
+     </property>
+    </item>
    </widget>
    <widget class="QPushButton" name="OKButton">
     <property name="geometry">

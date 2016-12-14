@@ -75,6 +75,8 @@ public:
          << QApplication::translate("PSI", "Naive Hashing Client", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("PSI", "Oblivious Transfer Server", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("PSI", "Oblivious Transfer Client", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("PSI", "Demonstrator Server", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("PSI", "Demonstrator Client", 0, QApplication::UnicodeUTF8)
         );
         OKButton->setText(QApplication::translate("PSI", "OK", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
